@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api/n1";
+const BASE_URL = "https://rescuecollab-server-bbph.onrender.com/";
 
 // AGENCY END POINTS
 export const agencyEndPoints = {
