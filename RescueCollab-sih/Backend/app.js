@@ -12,10 +12,10 @@ app.use(express.json())
 app.use(cors());
 
 // Routes
-app.use('/api/n1/agency',agencyRoutes);
-app.use('/api/n1/alert',alertRoutes);
-app.use('/api/n1/disaster',disasterRoutes);
-app.use('/api/n1/resource',resourecRoutes);
+app.use('/agency',agencyRoutes);
+app.use('/alert',alertRoutes);
+app.use('/disaster',disasterRoutes);
+app.use('/resource',resourecRoutes);
 
 
 // Rest Api  
