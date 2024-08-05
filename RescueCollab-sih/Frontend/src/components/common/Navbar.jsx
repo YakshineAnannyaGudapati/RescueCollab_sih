@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/logo.svg";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { authLogout } from "../../redux/Actions/authAction";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const state = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -24,161 +23,64 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full z-10 relative bg-gray-800 h-20 flex items-center justify-center shadow-lg">
-      <div className="w-11/12 flex flex-row items-center justify-between">
-        <div className="flex flex-row items-center justify-center gap-2">
-          <Link
-            className="flex flex-row items-center justify-center gap-2"
-            to="/"
-          >
-            <img src={logo} alt="logo" width="45px" className="hidden md:block" />
-            <p className="md:text-2xl sm:text-xl text-white font-Roberto font-bold">
-              RescueCollab
-            </p>
-          </Link>
-        </div>
+    <nav className="w-full bg-gray-800 h-20 flex items-center justify-between px-4 shadow-lg">
+      <div className="flex items-center w-full">
+        {/* Logo and Site Name */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="logo" width="45px" className="hidden md:block" />
+          <p className="text-2xl text-white font-bold">RescueCollab</p>
+        </Link>
 
-        <div className="hidden md:block">
-          <ul className="flex items-center justify-center gap-6">
+        {/* Links and Buttons */}
+        <div className="flex-1 flex items-center justify-center md:justify-between gap-4">
+          {/* Links */}
+          <div className="hidden md:flex md:items-center md:gap-6">
             {Links.map((link) => (
-              <li key={link.id}>
-                <Link
-                  to={link.link}
-                  className="text-white font-bold font-Roborto hover:text-indigo-500 duration-200"
-                >
-                  {link.name}
-                </Link>
-              </li>
+              <NavLink
+                key={link.id}
+                to={link.link}
+                className="text-white font-bold hover:text-indigo-500 duration-200"
+              >
+                {link.name}
+              </NavLink>
             ))}
-          </ul>
-        </div>
+          </div>
 
-        <div className="flex flex-row items-center justify-center gap-4">
-          {!state.isLoggedin && (
-            <NavLink to="/signup">
-              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24">
-                Sign Up
-              </button>
-            </NavLink>
-          )}
+          {/* Buttons */}
+          <div className="flex items-center gap-4">
+            {!state.isLoggedin && (
+              <NavLink to="/signup">
+                <button className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300">
+                  Sign Up
+                </button>
+              </NavLink>
+            )}
 
-          {state.isLoggedin && (
-            <div>
-              <NavLink to="/profile" className="nav-link">
-                <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24">
+            {state.isLoggedin && (
+              <NavLink to="/profile">
+                <button className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300">
                   Profile
                 </button>
               </NavLink>
-            </div>
-          )}
+            )}
 
-          <div>
             {state.isLoggedin ? (
               <button
-                className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24"
+                className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300"
                 onClick={handleLogout}
               >
                 Logout
               </button>
             ) : (
-              <NavLink to="/login" className="nav-link">
-                <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24">
+              <NavLink to="/login">
+                <button className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300">
                   Login
                 </button>
               </NavLink>
             )}
           </div>
         </div>
-
-        <div className="md:hidden">
-          <button
-            className="text-white focus:outline-none"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {isOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              )}
-            </svg>
-          </button>
-        </div>
       </div>
-
-      {isOpen && (
-        <div className="md:hidden absolute top-20 left-0 w-full bg-gray-800">
-          <ul className="flex flex-col items-center gap-4 p-4">
-            {Links.map((link) => (
-              <li key={link.id}>
-                <Link
-                  to={link.link}
-                  className="text-white font-bold font-Roborto hover:text-indigo-500 duration-200"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.name}
-                </Link>
-              </li>
-            ))}
-            {!state.isLoggedin && (
-              <NavLink to="/signup">
-                <button
-                  className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Sign Up
-                </button>
-              </NavLink>
-            )}
-            {state.isLoggedin && (
-              <NavLink to="/profile" className="nav-link">
-                <button
-                  className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Profile
-                </button>
-              </NavLink>
-            )}
-            {state.isLoggedin ? (
-              <button
-                className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24"
-                onClick={() => {
-                  handleLogout();
-                  setIsOpen(false);
-                }}
-              >
-                Logout
-              </button>
-            ) : (
-              <NavLink to="/login" className="nav-link">
-                <button
-                  className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300 w-24"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Login
-                </button>
-              </NavLink>
-            )}
-          </ul>
-        </div>
-      )}
     </nav>
   );
 };
