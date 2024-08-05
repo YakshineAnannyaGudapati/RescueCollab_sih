@@ -1,5 +1,5 @@
-import agency from '../models/agency.js';
-import alert from '../models/alert.js';
+import agency from "../models/agency.js";
+import alert from "../models/alert.js";
 
 // Create a new alert
 export const createAlert = async (req, res) => {
