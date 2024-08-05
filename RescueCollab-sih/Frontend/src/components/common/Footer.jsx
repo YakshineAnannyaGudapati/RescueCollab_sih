@@ -17,17 +17,16 @@ const Footer = () => {
   return (
     <footer className="bg-gray-800 relative text-white shadow-lg py-6">
       <div className="w-11/12 container mx-auto flex flex-col lg:flex-row justify-between items-center h-full">
-
         {/* left div with logo and name */}
         <div className="flex flex-row items-start justify-center">
           <div className="md:flex flex-row items-start justify-start sm:hidden">
             <img src={logo} alt="logo" width="60px" />
           </div>
           <div className="text-lg mb-4 md:mb-0 text-center md:text-left">
-            <Link to={'/'}>
-            <div className="md:text-4xl sm:text-2xl font-bold overflow-hidden ml-2">
-              RescueCollab
-            </div>
+            <Link to="/">
+              <div className="md:text-4xl sm:text-2xl font-bold overflow-hidden ml-2">
+                RescueCollab
+              </div>
             </Link>
             <p className="md:w-[400px] ml-2 mt-4 opacity-90 sm:text-sm">
               We Rescue the people in Need with unwavering dedication, providing
@@ -40,7 +39,7 @@ const Footer = () => {
         {/* Central div with links */}
         <div className="flex flex-row gap-x-16 mt-2 mb-2 items-center justify-center">
           <div>
-            <ul className="space-y-2 md:font-bold  font-Roborto">
+            <ul className="space-y-2 md:font-bold font-Roborto">
               <li>
                 <Link to="/disasters">Disasters</Link>
               </li>
@@ -54,7 +53,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <ul className="space-y-2 md:font-bold  font-Roborto">
+            <ul className="space-y-2 md:font-bold font-Roborto">
               <li>
                 <Link to="/profile">Profile</Link>
               </li>
@@ -67,30 +66,32 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-{/* Rightmost div with icons */}
-<div>
-  <ul className="flex space-x-4">
-    <li>
-      <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faGithub} />
-      </a>
-    </li>
-    <li>
-      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faLinkedin} />
-      </a>
-    </li>
-    <li>
-      <a style={iconStyle} href="/" target="_blank" rel="noopener noreferrer">
-        <FontAwesomeIcon icon={faTwitter} />
-      </a>
-    </li>
-  </ul>
-</div>
-</footer>
 
-       
+        {/* Rightmost div with icons */}
+        <div>
+          <ul className="flex space-x-4">
+            <li>
+              <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+            </li>
+            <li>
+              <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+            </li>
+            <li>
+              <a style={iconStyle} href="https://twitter.com/YourTwitterHandle" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   );
 };
 
 export default Footer;
+
+
