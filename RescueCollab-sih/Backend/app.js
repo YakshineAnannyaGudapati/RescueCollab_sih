@@ -10,7 +10,7 @@ const app = express();
 // Middlewares
 app.use(express.json());
 app.use(cors({
-  origin: 'https://rescueagencycollab-yakshine-anannyas-projects.vercel.app',
+  origin: 'https://rescueagencycollab.vercel.app',
 }));
 
 // Routes
