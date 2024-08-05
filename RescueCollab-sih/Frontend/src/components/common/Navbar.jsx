@@ -31,10 +31,10 @@ const Navbar = () => {
         </p>
       </Link>
 
-      {/* Flex container for links and buttons */}
-      <div className="flex items-center gap-4 flex-grow">
-        {/* Navigation Links */}
-        <div className="hidden md:flex md:items-center md:gap-6 flex-grow">
+      {/* Container for Links and Buttons */}
+      <div className="flex flex-grow items-center justify-between md:justify-center gap-4">
+        {/* Navigation Links for larger screens */}
+        <div className="hidden md:flex md:gap-6">
           {Links.map((link) => (
             <NavLink
               key={link.id}
@@ -46,11 +46,11 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Buttons */}
+        {/* Authentication Buttons */}
         <div className="flex items-center gap-4">
           {!state.isLoggedin && (
             <NavLink to="/signup">
-              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
+              <button className="bg-indigo-500 hover:bg-indigo-600 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
                 Sign Up
               </button>
             </NavLink>
@@ -58,7 +58,7 @@ const Navbar = () => {
 
           {state.isLoggedin && (
             <NavLink to="/profile">
-              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
+              <button className="bg-indigo-500 hover:bg-indigo-600 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
                 Profile
               </button>
             </NavLink>
@@ -66,14 +66,14 @@ const Navbar = () => {
 
           {state.isLoggedin ? (
             <button
-              className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300"
+              className="bg-indigo-500 hover:bg-indigo-600 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300"
               onClick={handleLogout}
             >
               Logout
             </button>
           ) : (
             <NavLink to="/login">
-              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
+              <button className="bg-indigo-500 hover:bg-indigo-600 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
                 Login
               </button>
             </NavLink>
