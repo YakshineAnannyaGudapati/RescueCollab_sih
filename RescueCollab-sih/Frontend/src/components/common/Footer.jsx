@@ -76,7 +76,7 @@ const Footer = () => {
       </a>
     </li>
     <li>
-      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya/" target="_blank" rel="noopener noreferrer">
+      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </li>
