@@ -1,4 +1,4 @@
-const BASE_URL = "https://rescueagencycollab.onrender.com";
+const BASE_URL = "https://rescuecollab-server.onrender.com";
 
 // AGENCY END POINTS
 export const agencyEndPoints = {
