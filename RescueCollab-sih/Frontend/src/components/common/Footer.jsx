@@ -67,29 +67,29 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+{/* Rightmost div with icons */}
+<div>
+  <ul className="flex space-x-4">
+    <li>
+      <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati">
+        <FontAwesomeIcon icon={faGithub} />
+      </a>
+    </li>
+    <li>
+      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya/">
+        <FontAwesomeIcon icon={faLinkedin} />
+      </a>
+    </li>
+    <li>
+      <a style={iconStyle} href="/">
+        <FontAwesomeIcon icon={faTwitter} />
+      </a>
+    </li>
+  </ul>
+</div>
+</footer>
 
-        {/* Rightmost div with icons */}
-        <div>
-          <ul className="flex space-x-4">
-            <li>
-              <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati">
-                <FontAwesomeIcon icon={faGithub} />
-              </a>
-            </li>
-            <li>
-              <a style={iconStyle} href="/">
-                <FontAwesomeIcon icon={faLinkedin} />
-              </a>
-            </li>
-            <li>
-              <a style={iconStyle} href="/">
-                <FontAwesomeIcon icon={faTwitter} />
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+       
   );
 };
 
