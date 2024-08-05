@@ -72,7 +72,7 @@ const Footer = () => {
         <div>
           <ul className="flex space-x-4">
             <li>
-              <a style={iconStyle} href="/">
+              <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati">
                 <FontAwesomeIcon icon={faGithub} />
               </a>
             </li>
