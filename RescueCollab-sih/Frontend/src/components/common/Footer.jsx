@@ -76,7 +76,7 @@ const Footer = () => {
       </a>
     </li>
     <li>
-      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya/">
+      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </li>
