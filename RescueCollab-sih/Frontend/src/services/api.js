@@ -1,4 +1,4 @@
-const BASE_URL = "https://rescuecollab-server-bbph.onrender.com";
+const BASE_URL = "https://rescueagencycollab.onrender.com";
 
 // AGENCY END POINTS
 export const agencyEndPoints = {
@@ -7,8 +7,7 @@ export const agencyEndPoints = {
   UPDATE_PASSWORD_API: BASE_URL + "/agency/updatepassword",
   GET_AGENCY_PROFILE: BASE_URL + "/agency/agencyProfile",
   UPDATE_AGENCY_INFO_API: BASE_URL + "/agency/update",
-  GET_AGENCY_RESOURCE_AND_DISASTER_API:
-    BASE_URL + "/agency/getAgencyResourcesAndDisasters",
+  GET_AGENCY_RESOURCE_AND_DISASTER_API: BASE_URL + "/agency/getAgencyResourcesAndDisasters",
   GET_ALL_AGENCY_LOCATIONS_API: BASE_URL + "/agency/agencyLocations",
   GET_SPECIFIC_AGENCY_PROFILE: BASE_URL + "/agency/findAgency",
   GET_ALL_AGENCIES: BASE_URL + "/agency/findAllAgencies",
