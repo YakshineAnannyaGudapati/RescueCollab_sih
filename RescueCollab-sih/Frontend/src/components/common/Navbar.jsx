@@ -23,62 +23,61 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-full bg-gray-800 h-20 flex items-center justify-between px-4 shadow-lg">
-      <div className="flex items-center w-full">
-        {/* Logo and Site Name */}
-        <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="logo" width="45px" className="hidden md:block" />
-          <p className="text-2xl text-white font-bold">RescueCollab</p>
-        </Link>
+    <nav className="w-full z-10 relative bg-gray-800 h-20 flex items-center justify-between px-4 shadow-lg">
+      <Link to="/" className="flex items-center gap-2">
+        <img src={logo} alt="logo" width="45px" className="hidden md:block" />
+        <p className="md:text-2xl sm:text-xl text-white font-Roberto font-bold">
+          RescueCollab
+        </p>
+      </Link>
 
-        {/* Links and Buttons */}
-        <div className="flex-1 flex items-center justify-center md:justify-between gap-4">
-          {/* Links */}
-          <div className="hidden md:flex md:items-center md:gap-6">
-            {Links.map((link) => (
-              <NavLink
-                key={link.id}
-                to={link.link}
-                className="text-white font-bold hover:text-indigo-500 duration-200"
-              >
-                {link.name}
-              </NavLink>
-            ))}
-          </div>
+      {/* Flex container for links and buttons */}
+      <div className="flex items-center gap-4 flex-grow">
+        {/* Navigation Links */}
+        <div className="hidden md:flex md:items-center md:gap-6 flex-grow">
+          {Links.map((link) => (
+            <NavLink
+              key={link.id}
+              to={link.link}
+              className="text-white font-bold hover:text-indigo-500 duration-200"
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
 
-          {/* Buttons */}
-          <div className="flex items-center gap-4">
-            {!state.isLoggedin && (
-              <NavLink to="/signup">
-                <button className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300">
-                  Sign Up
-                </button>
-              </NavLink>
-            )}
-
-            {state.isLoggedin && (
-              <NavLink to="/profile">
-                <button className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300">
-                  Profile
-                </button>
-              </NavLink>
-            )}
-
-            {state.isLoggedin ? (
-              <button
-                className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300"
-                onClick={handleLogout}
-              >
-                Logout
+        {/* Buttons */}
+        <div className="flex items-center gap-4">
+          {!state.isLoggedin && (
+            <NavLink to="/signup">
+              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
+                Sign Up
               </button>
-            ) : (
-              <NavLink to="/login">
-                <button className="bg-indigo-500 hover:bg-indigo-600 font-bold text-white rounded-full px-4 py-2 duration-300">
-                  Login
-                </button>
-              </NavLink>
-            )}
-          </div>
+            </NavLink>
+          )}
+
+          {state.isLoggedin && (
+            <NavLink to="/profile">
+              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
+                Profile
+              </button>
+            </NavLink>
+          )}
+
+          {state.isLoggedin ? (
+            <button
+              className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300"
+              onClick={handleLogout}
+            >
+              Logout
+            </button>
+          ) : (
+            <NavLink to="/login">
+              <button className="bg-indigo-500 hover:bg-indigo-600 hover:scale-95 block font-bold text-white shadow-sm rounded-full px-4 py-2 duration-300">
+                Login
+              </button>
+            </NavLink>
+          )}
         </div>
       </div>
     </nav>
