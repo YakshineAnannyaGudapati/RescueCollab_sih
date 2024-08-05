@@ -71,17 +71,17 @@ const Footer = () => {
 <div>
   <ul className="flex space-x-4">
     <li>
-      <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati">
+      <a style={iconStyle} href="https://github.com/YakshineAnannyaGudapati" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faGithub} />
       </a>
     </li>
     <li>
-      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya">
+      <a style={iconStyle} href="https://www.linkedin.com/in/yakshineanannya/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </li>
     <li>
-      <a style={iconStyle} href="/">
+      <a style={iconStyle} href="/" target="_blank" rel="noopener noreferrer">
         <FontAwesomeIcon icon={faTwitter} />
       </a>
     </li>
