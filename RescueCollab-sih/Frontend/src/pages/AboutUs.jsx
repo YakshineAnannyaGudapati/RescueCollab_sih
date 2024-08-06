@@ -1,7 +1,6 @@
 import React from "react";
 import ImageCard from "../components/ImageCard";
-import HarshPic from "../assets/team/harsh.jpg";
-import MukeshPic from "../assets/team/mukesh.jpg";
+
 
 const AboutUs = () => {
   const photos = [
@@ -27,8 +26,8 @@ const AboutUs = () => {
 
         {/* info div */}
         <div className="md:w-6/12 sm:w-full sm:mt-4 text-lg font-Roborto opacity-80 text-center">
-          {`"At MDU Rohtak, we are a dedicated team of aspiring engineers pursuing 
-          our B.Tech in Computer Science and Engineering. With a passion for technology
+          {`"We are a dedicated team of aspiring engineers pursuing 
+          our B.Tech in Computer Science and Design. With a passion for technology
            and innovation, we embarked on our journey to create cutting-edge solutions.
             Leveraging the power of the MERN stack (MongoDB, Express.js, React, and Node.js),
              we've developed applications that push boundaries and redefine user experiences.
