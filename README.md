@@ -4,7 +4,7 @@
 
 RescueCollab was developed by Team Innov8ors as a part of the Smart India Internal Hackathon (SIH) 2023.
 
-
+**Deployed Link:** [https://rescueagenciescollab-yakshine-anannyas-projects.vercel.app/](https://rescueagenciescollab-yakshine-anannyas-projects.vercel.app/)
 
 ## Problem Statement Details
 
@@ -37,6 +37,53 @@ Security and privacy are major considerations in building this application:
 - Protecting sensitive information such as personal contact details.
 
 Overall, RescueCollab aims to coordinate rescue agencies' efforts and provide aid more effectively during natural or man-made disasters.
+### Application Screenshots
+
+#### Landing Page
+
+![Landing Page 1](Screenshots/LandingPage1.png)
+![Landing Page 2](Screenshots/LandingPage2.png)
+![Landing Page 3](Screenshots/LandingPage3.png)
+
+#### Agency Signup
+
+![Signup](Screenshots/Signup.png)
+![Registered Successfully](Screenshots/RegisteredSuccesfully.png)
+
+#### Agency Login
+
+![Login](Screenshots/Login.png)
+![Login Successful](Screenshots/LoginSuccessfull.png)
+
+#### Agency can view and update their profile details.
+
+![Profile](Screenshots/Profile.png)
+![Profile 2](Screenshots/Profile2.png)
+![Update Profile](Screenshots/UpdateProfile.png)
+
+#### Agency can view and create the disaster details,displayed to all regsitered agencies.
+
+![Disaster 1](Screenshots/Disaster1.png)
+![Disaster 2](Screenshots/Disaster2.png)
+![Disaster 3](Screenshots/Disaster3.png)
+
+#### Agency can view and create the Resource details,displayed to all regsitered agencies.
+
+
+![Resource 1](Screenshots/Resource1.png)
+![Resource 2](Screenshots/Resource2.png)
+
+#### Agency can view and create the Alerts,displayed to all regsitered agencies.
+
+![Alert](Screenshots/Alert.png)
+
+#### Contact Page
+
+![Contact](Screenshots/Contact.png)
+
+#### Logout
+
+![Logout](Screenshots/logout.png)
 
 ## Tech Stack
 
@@ -114,53 +161,6 @@ Once the servers are running, open your browser and navigate to `http://localhos
 - Filters to narrow down search results based on specific criteria.
 - Communication and collaboration tools for agencies.
 - Security and privacy measures to protect sensitive information.
-
-### Screenshots
-
-#### Landing Page
-
-![Landing Page 1](Screenshots/Landing Page 1.png)
-![Landing Page 2](Screenshots/Landing Page 2.png)
-![Landing Page 3](Screenshots/Landing Page 3.png)
-
-#### Agency Signup
-
-![Signup](Screenshots/Signup.png)
-![Registered Successfully](Screenshots/Registered Succesfully.png)
-
-#### Agency Login
-
-![Login](Screenshots/Login.png)
-![Login Successful](Screenshots/Login Successfull.png)
-
-#### Agency Profile
-
-![Profile](Screenshots/Profile.png)
-![Profile 2](Screenshots/Profile2.png)
-![Update Profile](Screenshots/Update Profile.png)
-
-#### Disasters
-
-![Disaster 1](Screenshots/Disaster 1.png)
-![Disaster 2](Screenshots/Disaster 2.png)
-![Disaster 3](Screenshots/Disaster 3.png)
-
-#### Resources
-
-![Resource 1](Screenshots/Resource 1.png)
-![Resource 2](Screenshots/Resource 2.png)
-
-#### Alerts
-
-![Alert](Screenshots/Alert.png)
-
-#### Contact
-
-![Contact](Screenshots/Contact.png)
-
-#### Logout
-
-![Logout](Screenshots/logout.png)
 
 ## License
 
